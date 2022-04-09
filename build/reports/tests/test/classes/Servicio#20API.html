@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Servicio API</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Servicio API</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Servicio API</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">8.006s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Consulta libro existente</td>
+<td class="success">6.291s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Consultar libro inexistente</td>
+<td class="success">1.715s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>?[92m|-- Cuando se consulta un libro con el id 589?[0m
+?[92m|---- Pepito search book by id 589?[0m
+Request method:	GET
+Request URI:	https://www.etnassoft.com/api/v1/get/?id=589
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+?[92m|-- Entonces debería tener una respuesta con código 200?[0m
+?[92m|---- Then validate status code?[0m
+?[92m|-- Y el título del libro es 'Diseño Ágil con TDD' y el autor del libro debe ser 'Carlos Blé Jurados y autores'?[0m
+?[92m|---- Then validate response?[0m
+?[92m|------ Pepito should see a value that is equal to: &lt;&quot;Diseño Ágil con TDD&quot;&gt;?[0m
+?[92m|------ Pepito should see a value that is equal to: &lt;&quot;Carlos Blé Jurados y autores&quot;&gt;?[0m
+?[92m|-- Cuando se consulta un libro con el id 200?[0m
+?[92m|---- Pepito search book by id 200?[0m
+Request method:	GET
+Request URI:	https://www.etnassoft.com/api/v1/get/?id=200
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+?[92m|-- Entonces debería tener una respuesta con código 200?[0m
+?[92m|---- Then validate status code?[0m
+?[92m|-- Y la respuesta deberia ser vacia?[0m
+?[92m|---- Then validate response?[0m
+?[92m|------ Pepito should see a collection that is empty?[0m
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consulta libro existente(servicio-api;consulta-libro-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO co.com.sofka.serenityapi.questions.TheResponse - Response -&gt; [BookResponse(id=589, title=Diseño Ágil con TDD, author=Carlos Blé Jurados y autores, content=&amp;iquest;Dedicas una gran parte de tu tiempo de desarrollo a resolver incidencias de aplicaciones en producci&amp;oacute;n?, &amp;iquest;te enfrentas a sesiones de depuraci&amp;oacute;n interminables para encontrar la ra&amp;iacute;z de un problema?, &amp;iquest;te exten&amp;uacute;a descubrir innumerables fallos cada vez que introduces nuevas caracter&amp;iacute;sticas a funcionalidades ya existentes?. Si respondes afirmativamente estas cuestiones y quieres promover el cambio, en este libro encontrar&amp;aacute;s la clave.
+
+TDD es una t&amp;eacute;cnica de desarrollo que se lleva aplicando durante a&amp;ntilde;os con gran &amp;eacute;xito en lugares como EEUU y Reino Unido, sin embargo, la ausencia de informaci&amp;oacute;n en espa&amp;ntilde;ol sobre la misma ha supuesto un freno para su difusi&amp;oacute;n en los pa&amp;iacute;ses hispano-parlantes. El objetivo de este libro es poner soluci&amp;oacute;n a este dilema y ofrecer una referencia completa, tanto te&amp;oacute;rica como pr&amp;aacute;ctica, que permita al lector iniciarse en su comprensi&amp;oacute;n y aplicaci&amp;oacute;n.
+
+A estas alturas sabemos que aprender nuevos lenguajes o frameworks incrementa nuestra productividad a corto plazo, pero los problemas m&amp;aacute;s graves a los que nos enfrentamos siguen sin soluci&amp;oacute;n. TDD propone una nueva forma de afrontar los desarrollos atacando estas dificultades de frente y permitiendo entregar software m&amp;aacute;s robusto y fiable. Con TDD, nuestro rendimiento a largo plazo s&amp;iacute; se ve beneficiado, no olvidemos que uno de los factores con m&amp;aacute;s influencia en la productividad de hoy es la calidad del c&amp;oacute;digo escrito ayer.
+
+Dise&amp;ntilde;o &amp;Aacute;gil con TDD nos ense&amp;ntilde;ar&amp;aacute; a:
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;Escribir tests que aumenten la fiabilidad del c&amp;oacute;digo.&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Escribir tests de aceptaci&amp;oacute;n que nos ayudar&amp;aacute;n a centrarnos, espec&amp;iacute;ficamente, en el problema a resolver.&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Mejorar nuestros dise&amp;ntilde;os para hacerlos m&amp;aacute;s simples y flexibles.&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Escribir c&amp;oacute;digo f&amp;aacute;cil de mantener. Con TDD, los test son documentaci&amp;oacute;n viva y actualizada de nuestro c&amp;oacute;digo, la mejor documentaci&amp;oacute;n posible.&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;Encajar TDD dentro del paradigma &amp;aacute;gil y relacionarlo con otras t&amp;eacute;cnicas como la integraci&amp;oacute;n continua.&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;, urlDownload=https://openlibra.com/book/diseno-agil-con-tdd, cover=http://collection.openlibra.com.s3.amazonaws.com/covers/2011/04/disenoAgilConTDD.jpg, categories=[Category(categoryId=222, name=Java, nicename=programacion_java), Category(categoryId=218, name=Metodologías Ágiles, nicename=metodologias_agiles), Category(categoryId=220, name=Programación, nicename=libros_programacion), Category(categoryId=219, name=TDD, nicename=tdd_metodologias_agiles)], tags=[Tag(tagId=290, name=agil, nicename=agil), Tag(tagId=97, name=java, nicename=java), Tag(tagId=103, name=tdd, nicename=tdd), Tag(tagId=104, name=tests, nicename=tests)])]
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consulta libro existente
+----------------------------------------------------------------------?[0m
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar libro inexistente(servicio-api;consultar-libro-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO co.com.sofka.serenityapi.questions.TheResponse - Response -&gt; []
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar libro inexistente
+----------------------------------------------------------------------?[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1</a> at 09-abr-2022 15:01:24</p>
+</div>
+</div>
+</body>
+</html>

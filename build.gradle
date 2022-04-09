@@ -1,0 +1,58 @@
+group 'co.com.sofka.serenityapi'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        google()
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:2.3.12"
+        classpath "io.freefair.gradle:lombok-plugin:5.1.1"
+    }
+}
+
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "net.serenity-bdd.aggregator"
+apply plugin: "io.freefair.lombok"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+test {
+    systemProperties System.getProperties()
+    systemProperty "file.encoding", "UTF-8"
+    testLogging.showStandardStreams = true
+}
+
+ext {
+    serenityVersion = '3.0.5'
+}
+
+dependencies {
+    implementation "com.google.api-client:google-api-client:1.24.1"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-reports:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-rest-assured:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
+    implementation "com.googlecode.json-simple:json-simple:1.1.1"
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.3'
+
+    testImplementation 'org.slf4j:slf4j-simple:1.7.36'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.8.2"
+}

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Servicio API" skipped="0" tests="2" time="9.04" timestamp="2022-04-09 02:42:30"><testcase name="Validar código de respuesta"/><testcase name="Consulta autor del libro"/></testsuite>
